@@ -217,7 +217,7 @@ class AnalysisPlots_mpl(object):
         self.B_slider.on_change('value', self.update_data)
         self.nfeatures_slider.on_change('value', self.update_data)
         #Building complete widget
-        self.widget = column(self.nfeatures_slider, self.A_slider, self.B_slider, self.plot, self.plot_control)
+        self.widget = column(self.nfeatures_slider, self.plot, self.A_slider, self.B_slider, self.plot_control)
 
     def BuildDataForSourceChic(self):
         """
@@ -333,7 +333,7 @@ def mpl_create_app(doc, folder, data_name, data_name2, activities, display=["std
 
     if dataref is not None:
         i=0
-        colors = [cm.autumn,cm.summer,cm.spring,cm.winter,cm.GnBu]
+        colors = [cm.summer,cm.spring,cm.autumn,cm.winter,cm.GnBu]
         for i in range(0,len(dataref)):
             GraphRatio.add_multiline(FullData.reference[i], display='bucket', title=dataref[i], cmap=colors[i], levels=[1])
             GraphSubstract.add_multiline(FullData.reference[i], display='bucket', title=dataref[i], cmap=colors[i], levels=[1])
