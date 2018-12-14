@@ -1,0 +1,9 @@
+dependencies:
+  - bokeh
+  - nbserverproxy
+  - pandas
+  - scipy
+  - pyyaml
+  - numpy
+  - scikit-learn
+  - matplotlib
